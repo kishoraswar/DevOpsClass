@@ -1,0 +1,72 @@
+tell me about urself,, and roles and responsibility
+
+1)What is devops? why we need devops
+
+2)what is git reflog
+
+3)what is conflict .. how to resolve  conflict
+
+4)rebase vs merge
+
+5)define index
+
+6)diff between git pull and fetch
+
+7)what is stash
+
+8)which is best delivery or development
+
+9)what is git revet and reset
+
+10)which main tool we need to integrate with jenkins
+
+11)dockerfile command and explaination
+
+12)change types
+
+13)how to add thirdt party plugin
+
+14)explain ci/cd pipeline
+
+15)explain sonarqube integration with jenkins
+
+16)differce between add and copy
+
+17)different between run,cmd and entrypoint
+
+18)what is jacaco plugin
+
+19)how to print last element of lists in python
+
+20)how shell script is executing
+
+21)what is git reflog
+
+22)diffrence betwenn continious delivery and deployment
+
+23)current project setup
+
+24)brnanching strategy:
+https://www.bmc.com/blogs/devops-branching-strategies/#:~:text=A%20branching%20strategy%20helps%20define,without%20affecting%20the%20entire%20product.
+
+25)explain flow from git to prod deployment
+
+26)Have you done any POC from you end.
+
+27)What is DevOps
+
+28)Are you aware about other ci tools
+
+29)What is sonarqube and why its required
+
+30)How to uplaod artifact in jfrog artifactory.
+
+31)Which artifactory we are using
+
+32)Dockerfile comamnd which you used in current project
+
+
+
+
+
+
