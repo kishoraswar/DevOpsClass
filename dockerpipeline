@@ -1,0 +1,49 @@
+pipeline{
+    agent{
+        label "aws"
+    }
+    environment {
+		DOCKERHUB_CREDENTIALS=credentials('dockerhub-cred-kishor')
+	}
+
+    stages{
+        stage('Build'){
+            steps{
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/kishoraswar/jenkins-docker-example.git']]])
+                sh "mvn -Dmavne.test.failure..ignore=true clean package"
+             
+                
+                
+            }
+        }
+        stage('Build Docker Image'){
+            steps{
+                script{
+                    sh "docker build -t kishoraswar/my-app-1:${BUILD_NUMBER} ." 
+                }
+                
+            }
+            
+        }
+          stage('Push Docker Image'){
+               steps {
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+			}
+            
+        }
+        stage('Push') {
+
+			steps {
+			    
+				sh 'docker push kishoraswar/my-app-1:${BUILD_NUMBER}'
+			}
+		}
+        
+    }   
+    
+    post {
+		always {
+			sh 'docker logout'
+		}
+	}
+}
