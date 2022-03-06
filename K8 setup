@@ -1,0 +1,60 @@
+root@ip-172-31-4-205:/home/ubuntu# history
+    1  pwd
+    2  yum install docker
+    3  yum install dokcer
+    4  apt-get install docker
+    5  cat /etc/os-release
+    6  apt-get install docker
+    7  apt-get update -y
+    8  apt-get install docker
+    9  docker ps
+   10  apt install docker
+   11  cat /etc/os-release
+   12  apt-get remove docker docker-engine docker.io containerd runc
+   13  apt-get install docker.io
+   14  docker ps
+   15  service start docker
+   16  service docker start
+   17  service docker status
+   18  sudo usermod pi -aG docker
+   19  sudo usermod pi -aG docker ubuntu
+   20  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - &&   echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list && \
+   21  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - &&   echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list &&   sudo apt-get update -q &&   sudo apt-get install -qy kubeadm
+   22  sudo swapoff -a
+   23  sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+   24  kubeadm init
+   25  vi /etc/docker/daemon.json
+   26  systemctl daemon-reload
+   27  kubeadm init
+   28  kbeadm reset
+   29  kubeadm reset
+   30  kubeadm init
+   31  kubeadm reset
+   32  sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+   33  sudo apt-get install -y     apt-transport-https     ca-certificates     curl     gnupg     lsb-release
+   34  sudo apt-get install -y apt-transport-https ca-certificates curl
+   35  sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+   36  sudo apt-get update -y
+   37  sudo apt-get install -y kubelet kubeadm kubectl
+   38  sudo apt-mark hold kubelet kubeadm kubectl
+   39  IPADDR="10.0.0.10"
+   40  NODENAME=$(hostname -s)
+   41  sudo kubeadm init --apiserver-advertise-address=$IPADDR  --apiserver-cert-extra-
+   42  sudo kubeadm init --apiserver-advertise-address=$IPADDR  --apiserver-cert-extra-sans=$IPADDR  --pod-network-cidr=192.168.0.0/16 --node-name $NODENAME --ignore-preflight-errors Swap
+   43  vi /etc/docker/daemon.json
+   44  kubeadm init
+   45  kubeadm reset
+   46  kubeadm init
+   47  kubectl get nodes
+   48  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   49  kubectl get nodes
+   50  history
+   51  kubectl get pods -n kube-system
+   52  curl https://projectcalico.docs.tigera.io/manifests/calico.yaml -O
+   53  kubectl apply -f calico.yaml
+   54  kubectl get pods -n kube-system
+   55  kubectlget pods
+   56  kubectl get pods
+   57  kubectl get nodes
+   58  history
+root@ip-172-31-4-205:/home/ubuntu#
