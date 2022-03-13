@@ -1,0 +1,54 @@
+How to Setup Minikube:
+1)Create EC2 instance with minimum 2CPU and 2GB RAM.
+2)Install docker using below command
+apt-get install docker.io
+
+3)Download minikube and kubectl
+curl -LO https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+
+execute below command:
+mv minikube-linux-amd64  /usr/local/bin/minikube
+chmod 755 /usr/local/bin/minikube
+
+mv kubectl /usr/local/bin/kubectl
+chmod 755 /usr/local/bin/kubectl
+
+root@ip-172-31-31-126:~#  minikube version
+minikube version: v1.25.1
+commit: 3e64b11ed75e56e4898ea85f96b2e4af0301f43d
+
+root@ip-172-31-31-126:~# kubectl version
+Client Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.3", GitCommit:"816c97ab8cff8a1c72eccca1026f7820e93e0d25", GitTreeState:"clean", BuildDate:"2022-01-25T21:25:17Z", GoVersion:"go1.17.6", Compiler:"gc", Platform:"linux/amd64"}
+Server Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.1", GitCommit:"86ec240af8cbd1b60bcc4c03c20da9b98005b92e", GitTreeState:"clean", BuildDate:"2021-12-16T11:34:54Z", GoVersion:"go1.17.5", Compiler:"gc", Platform:"linux/amd64"}
+root@ip-172-31-31-126:~#
+
+4)Start Minikube using below command
+minikube start --driver=none
+
+root@ip-172-31-31-126:~# kubectl get nodes
+NAME               STATUS   ROLES                  AGE     VERSION
+ip-172-31-31-126   Ready    control-plane,master   5m48s   v1.23.1
+
+Check Minikube Status:
+
+root@ip-172-31-31-126:~# minikube status
+minikube
+type: Control Plane
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+
+
+Cluster info:
+root@ip-172-31-31-126:~# kubectl cluster-info
+Kubernetes control plane is running at https://172.31.31.126:8443
+CoreDNS is running at https://172.31.31.126:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+
+Check  Node Status:
+root@ip-172-31-31-126:~# kubectl get nodes
+NAME               STATUS   ROLES                  AGE     VERSION
+ip-172-31-31-126   Ready    control-plane,master   8m13s   v1.23.1
+
