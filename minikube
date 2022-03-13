@@ -23,6 +23,10 @@ Client Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.3", GitCom
 Server Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.1", GitCommit:"86ec240af8cbd1b60bcc4c03c20da9b98005b92e", GitTreeState:"clean", BuildDate:"2021-12-16T11:34:54Z", GoVersion:"go1.17.5", Compiler:"gc", Platform:"linux/amd64"}
 root@ip-172-31-31-126:~#
 
+install conntrack package
+
+apt-get install conntrack
+
 4)Start Minikube using below command
 minikube start --driver=none
 
@@ -45,6 +49,7 @@ Cluster info:
 root@ip-172-31-31-126:~# kubectl cluster-info
 Kubernetes control plane is running at https://172.31.31.126:8443
 CoreDNS is running at https://172.31.31.126:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
 
 
 Check  Node Status:
