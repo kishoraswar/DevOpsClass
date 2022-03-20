@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+     name: pod1
+     labels:
+         app: myapp
+         type: frontend
+spec:
+    containers:
+            - name: mynginximage
+              image: nginx
+              resources:
+                     requests:
+                           memory: 1G
+                           cpu: 500m
+                     limits:
+                           memory: 2G
